@@ -1,7 +1,5 @@
 init:
-    $ mods["prolog"] = "{font=mods/modec/13889.otf}{color=#ff0000}{size=70}НЕ НАЖИМАТЬ{/size}{/color}{/font}"
-    $ tsoktsok = "mods/modec/cokot-kopyt.mp3"
-    image bg loshatka = "mods/modec/image2.jpg"
+    $ mods["prolog"] = "{color=#ff0000}{size=70}НЕ НАЖИМАТЬ{/size}{/color}"
     define lol = Character('Лашатка', color="#ebf3d6")
     define cha = Character('Чацкий', color="#e1dd7d")
     transform tuda_syda_al:
@@ -21,9 +19,6 @@ init:
     $ odva = Dissolve(1.2)
     $ bistr = Dissolve(0.7)
 label prolog:
-    play music tsoktsok fadein 2.0
-    scene bg loshatka
-    with dissolve2
     lol "цок-цок-цок"
     "Я оставил Москву позади. Она прогнила."
     "Там я встретил лишь продажный спектакль."
@@ -31,7 +26,6 @@ label prolog:
     "А я не хочу жить в пропащей стране. Поэтому сейчас карета мчит к Петербургу."
     "Оттуда я отправлюсь в многообещающую Европу."
     "Предстоит долгий и тяжёлый путь, поэтому стоит поспать."
-    stop music
     $ backdrop = "days"
     $ new_chapter(1, u"Мод ботяры. День первый.")
     with dissolve2
